@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mwungeri Dieudonne | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <a href="#home" class="text-2xl font-bold text-primary">Mwungeri Dieudonne</a>
+        <nav class="hidden md:flex">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#bio" class="nav-link">About</a>
+            <a href="#gallery" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="burger" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <nav id="mobileMenu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#bio" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button id="closeMenuBtn" class="nav-link">
+            <i class="fas fa-times"></i>
+        </button>
+    </nav>
+</header>
+
+<!-- Home Section -->
+<section id="home" class="section">
+    <div class="home-content">
+        <div>
+            <p class="text-primary text-lg">Hello, I'm</p>
+            <h1 class="text-4xl font-bold">Mwungeri Dieudonne</h1>
+            <div class="text-gray-600 mb-4">
+              currently a student at Liquid net family high school @ Agahozo shalom youth village.
+            </div>
+            <p class="text-gray-600 mb-8">
+              I have a strong passion for computer programming and music, and I'm eager to explore new  technologies and collaborate on creative projects. In my free time, I enjoy learning abut new trends in tech and playing drums. I'm always looking for new opportunities to grow and learn, so feel free to reach out if you'd like to connect!
+            </p>
+            <a href="#gallery" class="btn btn-primary">Visit Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+        <div>
+            <img src="one.png" alt="Mwungeri Dieudonne">
+        </div>
+    </div>
+</section>
+
+<!-- Bio Section -->
+<section id="bio" class="section">
+    <h3>About Me</h3>
+    <p> I've been captivated by the way rhythm can evoke feelings since I was five years old, when I struck a drum for the first time. I've given drumming my whole attention over the past 2 years, experimenting with a variety of styles and collaborating with many artists that have helped in my artistic development. My level was changed by playing in a local band, which taught me the value of collaboration and engaging the audience during live performances. Sharing my enthusiasm and expertise with younger drummers is something else I enjoy doing. In the future, I can't wait to pursue my studies in music in a nurturing setting that encourages innovation and teamwork while pushing me to become a better drummer. For me, playing the drums is more than just a hobby; it's an essential way to express my feelings.
+</p>
+  <br>
+  <!-- <button class="view" onclick="window.open('resume.pdf', '_blank')">View Resume</button> -->
+  <a href="https://docs.google.com/document/d/1oBvwEieWjMJwVYmG9awQbjPFQhmMbOz1EyMoMwV92fg/edit?pli=1&tab=t.0" target="_blank" class="btn btn-download">View Resume</a>
+</section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <h3>Project Highlights</h3>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="eco.png" alt="Project 1">
+                <p class="caption">Eco-Bank end of year staff party: This is an event organised by Eco Bank to celebrate their achievements reached at the end of year .
+</p>
+            </div>
+            <div class="gallery-item">
+                <img src="tarama.png" alt="Project 2">
+                <p class="caption">Tarama Rwanda festivals: This is an event which is prepared by Tarama Rwanda initiatives which aims at developing youth talents through connections.
+</p>
+            </div>
+            <div class="gallery-item">
+                <img src="project3.png" alt="Project 3">
+                <p class="caption">Ubumuntu Art festival: Exploring the intersection of art and technology.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="iwacu.png" alt="Project 4">
+                <p class="caption">Iwacu Fashion and art event
+: A community-driven initiative for digital literacy.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <h3>Contact Me</h3>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2023 Mwungeri Dieudonne. All rights reserved.</p>
+    <div class="social-media">
+        <a href="https://www.facebook.com/mwungeri.tekno.7" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/__the_beat_maker/" target="_blank">Instagram</a>
+        <!-- <a href="https://twitter.com/mwungeri" target="_blank">Twitter</a> -->
+        <a href="https://linkedin.com/in/mwungeri" target="_blank">LinkedIn</a>
+        <p>Tel: +250791876484</p>
+        <p>WhatsApp: +250791876484</p>
+        <p>E-mail: dmwungeri22@gmail.com</p>
+    </div>
+</footer>
+
+<script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.style.display = 'block';
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+        mobileMenu.style.display = 'none';
+    });
+
+    // Change header style on scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 0) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
+
+</body>
+</html>
